@@ -1,4 +1,4 @@
-package com.unu.edu.project_gestion_envios_backend.entities;
+package com.unu.edu.project_gestion_envios_backend.model;
 
 public enum EstadoPaquete {
     EN_AGENCIA_ENVIO,
