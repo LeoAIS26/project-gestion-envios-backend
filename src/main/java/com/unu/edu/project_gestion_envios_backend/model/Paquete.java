@@ -1,11 +1,22 @@
-package com.unu.edu.project_gestion_envios_backend.entities;
+package com.unu.edu.project_gestion_envios_backend.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 
+@Getter 
+@Setter 
+@AllArgsConstructor 
+@NoArgsConstructor 
+@EqualsAndHashCode (callSuper = true)
 @Entity
 @Table(name = "paquetes")
-public class PaqueteEntity extends BaseEntity{
+public class Paquete extends BaseModel{
 
     @Column(name = "numero_rastreo", nullable = false, length = 10)
     private String numeroRastreo;
@@ -15,14 +26,14 @@ public class PaqueteEntity extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "remitente_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private UsuarioEntity remitente;
+    private Usuario remitente;
 
     @Column(name = "destinatario_id")
     private Integer destinatarioId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "destinatario_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private UsuarioEntity destinatario;
+    private Usuario destinatario;
 
     @Column(name = "destinatario_nombre", nullable = false, length = 20)
     private String destinatarioNombre;
@@ -38,14 +49,14 @@ public class PaqueteEntity extends BaseEntity{
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "agencia_envio_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private AgenciaEntity agenciaEnvio;
+    private Agencia agenciaEnvio;
 
     @Column(name = "agencia_destino_id", nullable = false)
     private Integer agenciaDestinoId;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "agencia_destino_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private AgenciaEntity agenciaDestino;
+    private Agencia agenciaDestino;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal peso;

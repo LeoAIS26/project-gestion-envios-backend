@@ -1,11 +1,21 @@
-package com.unu.edu.project_gestion_envios_backend.entities;
+package com.unu.edu.project_gestion_envios_backend.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Getter 
+@Setter 
+@AllArgsConstructor 
+@NoArgsConstructor 
+@EqualsAndHashCode (callSuper = true)
 @Entity
 @Table(name = "usuarios")
-public class UsuarioEntity extends BaseEntity{
+public class Usuario extends BaseModel{
 
     @Column(name = "nombre", nullable = false, length = 20)
     private String nombre;
