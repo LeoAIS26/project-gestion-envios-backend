@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres:alpine3.14
+    container_name: database-postgres
+    restart: always
+    environment:
+    - POSTGRES_PASSWORD=1234
+    ports:
+    - 5434:5432

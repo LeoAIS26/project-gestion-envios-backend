@@ -1,0 +1,63 @@
+package com.unu.edu.project_gestion_envios_backend.entities;
+
+import jakarta.persistence.*;
+import java.math.BigDecimal;
+
+@Entity
+@Table(name = "paquetes")
+public class PaqueteEntity extends BaseEntity{
+
+    @Column(name = "numero_rastreo", nullable = false, length = 10)
+    private String numeroRastreo;
+
+    @Column(name = "remitente_id", nullable = false)
+    private Integer remitenteId;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "remitente_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private UsuarioEntity remitente;
+
+    @Column(name = "destinatario_id")
+    private Integer destinatarioId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "destinatario_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private UsuarioEntity destinatario;
+
+    @Column(name = "destinatario_nombre", nullable = false, length = 20)
+    private String destinatarioNombre;
+
+    @Column(name = "destinatario_apellido", nullable = false, length = 30)
+    private String destinatarioApellido;
+
+    @Column(name = "destinatario_dni", nullable = false, length = 8)
+    private String destinatarioDni;
+
+    @Column(name = "agencia_envio_id", nullable = false)
+    private Integer agenciaEnvioId;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "agencia_envio_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private AgenciaEntity agenciaEnvio;
+
+    @Column(name = "agencia_destino_id", nullable = false)
+    private Integer agenciaDestinoId;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "agencia_destino_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private AgenciaEntity agenciaDestino;
+
+    @Column(nullable = false, precision = 10, scale = 2)
+    private BigDecimal peso;
+
+    @Column(name = "es_fragil", nullable = false)
+    private Boolean esFragil = Boolean.FALSE;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "estado_actual", nullable = false)
+    private EstadoPaquete estadoActual;
+
+    @Column(columnDefinition = "text")
+    private String observaciones;
+
+}
