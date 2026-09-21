@@ -46,22 +46,22 @@ SELECT
     a.id, NOW(), NULL, NULL, NULL
 FROM (VALUES
           -- Pucallpa (1 al 3)
-          (1, 'Carlos', 'Alberto', 'Rojas', 'Mendoza', '71000001', '961000001', 'ADMINISTRADOR', 'crojas', '$2a$10$w09a...hash', 'Agencia Pucallpa Central'),
-          (2, 'Ana', 'María', 'Sánchez', 'Torres', '71000002', '961000002', 'EMPLEADO', 'asanchez', '$2a$10$w09a...hash', 'Agencia Pucallpa Central'),
-          (3, 'Marcos', NULL, 'Pinedo', 'Vega', '71000003', '961000003', 'EMPLEADO', 'mpinedo', '$2a$10$w09a...hash', 'Agencia Pucallpa Central'),
+          (1, 'Carlos', 'Alberto', 'Rojas', 'Mendoza', '71000001', '961000001', 'ADMINISTRADOR', 'crojas', '$2y$10$Fai/lgoHtIRx6kGszxS3iOFmRcJ.pukd0QTaouQuoFCLhttZHiVVy', 'Agencia Pucallpa Central'),
+          (2, 'Ana', 'María', 'Sánchez', 'Torres', '71000002', '961000002', 'EMPLEADO', 'asanchez', '$2y$10$MRuGVQ7AwzdjXXlo8NVKjO0Ahz4BTt3AntlLJnW/v5HQxVuBbLdWG', 'Agencia Pucallpa Central'),
+          (3, 'Marcos', NULL, 'Pinedo', 'Vega', '71000003', '961000003', 'EMPLEADO', 'mpinedo', '$2y$10$SolSl5Iy63eeTvd8JoeoZuYDsc/w3V5IotqL23YMTy/jOskhJwhge', 'Agencia Pucallpa Central'),
 
           -- Lima (4 al 6)
-          (4, 'Roberto', 'Luis', 'García', 'Alva', '72000001', '981000001', 'ADMINISTRADOR', 'rgarcia', '$2a$10$w09a...hash', 'Agencia Lima Centro'),
-          (5, 'Lucía', 'Elena', 'Flores', 'Vargas', '72000002', '981000002', 'EMPLEADO', 'lflores', '$2a$10$w09a...hash', 'Agencia Lima Centro'),
-          (6, 'Diego', NULL, 'Navarro', 'Castro', '72000003', '981000003', 'EMPLEADO', 'dnavarro', '$2a$10$w09a...hash', 'Agencia Lima Centro'),
+          (4, 'Roberto', 'Luis', 'García', 'Alva', '72000001', '981000001', 'ADMINISTRADOR', 'rgarcia', '$2y$10$E9zBrFaA0lD9DLJqH6ZgG.B5FlcBGTMAy7T8.JeRr.UScyvTi9eNW', 'Agencia Lima Centro'),
+          (5, 'Lucía', 'Elena', 'Flores', 'Vargas', '72000002', '981000002', 'EMPLEADO', 'lflores', '$2y$10$JJwa8DkXzgzAbPnjj3VIPuB3Kazi7i7FPU0/a21709FCJsUFJVtQS', 'Agencia Lima Centro'),
+          (6, 'Diego', NULL, 'Navarro', 'Castro', '72000003', '981000003', 'EMPLEADO', 'dnavarro', '$2y$10$FzkW4CnD5VUCreKg5VeCa.Oz4J6/4.M9tuYwgsYNSdiuKFsmHy626', 'Agencia Lima Centro'),
 
           -- Tingo María (7 y 8)
-          (7, 'Jorge', 'Eduardo', 'Paredes', 'Rios', '73000001', '962000001', 'EMPLEADO', 'jparedes', '$2a$10$w09a...hash', 'Agencia Tingo María'),
-          (8, 'Rosa', 'Isabel', 'Gómez', 'Quispe', '73000002', '962000002', 'EMPLEADO', 'rgomez', '$2a$10$w09a...hash', 'Agencia Tingo María'),
+          (7, 'Jorge', 'Eduardo', 'Paredes', 'Rios', '73000001', '962000001', 'EMPLEADO', 'jparedes', '$2y$10$2DiUIicHqxRFE8LRtXeP.uRN1S18LZmIz1SClbtDin/L8VBQdMdG.', 'Agencia Tingo María'),
+          (8, 'Rosa', 'Isabel', 'Gómez', 'Quispe', '73000002', '962000002', 'EMPLEADO', 'rgomez', '$2y$10$WVajbZ0PwDN90EpVFIH72OTQIeIBQ./WfHcbwImIA2jGuMG8I.55m', 'Agencia Tingo María'),
 
           -- Huánuco (9 y 10)
-          (9, 'Manuel', 'Antonio', 'Dávila', 'Salazar', '74000001', '963000001', 'EMPLEADO', 'mdavila', '$2a$10$w09a...hash', 'Agencia Huánuco'),
-          (10, 'Katia', 'Paola', 'Morales', 'Cueva', '74000002', '963000002', 'EMPLEADO', 'kmorales', '$2a$10$w09a...hash', 'Agencia Huánuco')
+          (9, 'Manuel', 'Antonio', 'Dávila', 'Salazar', '74000001', '963000001', 'EMPLEADO', 'mdavila', '$2y$10$RIdDZ1rWYmQxtFWns4lmJO4eEREHXLYK3OoFZomaQXbIxdsjCD4hK', 'Agencia Huánuco'),
+          (10, 'Katia', 'Paola', 'Morales', 'Cueva', '74000002', '963000002', 'EMPLEADO', 'kmorales', '$2y$10$aygy/kXM/AnK7FfTqBzLf.87.LIStTXScnfa33.1LocJY0qHwe3jO', 'Agencia Huánuco')
      ) AS d(orden_insert, nombre, segundo_nombre, apellido_paterno, apellido_materno, dni, telefono, rol, username, password, agencia_nombre)
          JOIN agencias a ON a.nombre = d.agencia_nombre
 WHERE NOT EXISTS (
