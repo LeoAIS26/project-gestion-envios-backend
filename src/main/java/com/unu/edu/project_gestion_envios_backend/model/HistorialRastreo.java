@@ -46,10 +46,17 @@ public class HistorialRastreo extends BaseModel{
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "empleado_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private Usuario empleado;
+    private Empleado empleado;
 
     @NotNull
     @Column(name = "fecha_hora", nullable = false)
     private LocalDateTime fechaHora;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
+    private Empleado creador;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "updated_by", referencedColumnName = "id", insertable = false, updatable = false)
+    private Empleado modificador;
 }

@@ -26,14 +26,14 @@ public class Paquete extends BaseModel{
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "remitente_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private Usuario remitente;
+    private Cliente remitente;
 
     @Column(name = "destinatario_id")
     private Integer destinatarioId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "destinatario_id", referencedColumnName = "id", insertable = false, updatable = false)
-    private Usuario destinatario;
+    private Cliente destinatario;
 
     @Column(name = "destinatario_nombre", nullable = false, length = 20)
     private String destinatarioNombre;
@@ -70,5 +70,13 @@ public class Paquete extends BaseModel{
 
     @Column(columnDefinition = "text")
     private String observaciones;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "created_by", referencedColumnName = "id", insertable = false, updatable = false)
+    private Empleado creador;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "updated_by", referencedColumnName = "id", insertable = false, updatable = false)
+    private Empleado modificador;
 
 }

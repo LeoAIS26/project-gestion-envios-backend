@@ -24,4 +24,11 @@ public abstract class BaseModel {
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
+
+    @Column(name = "created_by", updatable = false)
+    private Integer createdBy;
+
+    @Column(name = "updated_by")
+    private Integer updatedBy;
+
 }
