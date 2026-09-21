@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 @Table(name = "paquetes")
 public class Paquete extends BaseModel{
 
-    @Column(name = "numero_rastreo", nullable = false, length = 10)
+    @Column(name = "numero_rastreo", nullable = false, length = 10, unique = true)
     private String numeroRastreo;
 
     @Column(name = "remitente_id", nullable = false)

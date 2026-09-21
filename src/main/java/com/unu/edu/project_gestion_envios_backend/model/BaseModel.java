@@ -9,8 +9,8 @@ import org.hibernate.annotations.ColumnDefault;
 import java.time.LocalDateTime;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @MappedSuperclass
 public abstract class BaseModel {
 

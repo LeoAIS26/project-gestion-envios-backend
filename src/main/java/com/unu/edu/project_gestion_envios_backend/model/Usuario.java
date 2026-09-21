@@ -40,11 +40,21 @@ public class Usuario extends BaseModel{
     private Rol rol;
 
     @Size(max = 10)
-    @Column(name = "username", length = 10)
+    @Column(name = "username", length = 10, unique = true)
     private String username;
 
     @Size(max = 255)
     @Column(name = "password")
     private String password;
+
+    @Column(name = "agencia_id")
+    private Integer agenciaId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "agencia_id", referencedColumnName = "id", insertable = false, updatable = false)
+    private Agencia agencia;
+
+    @Column(nullable = false)
+    private Boolean activo = Boolean.TRUE;
 
 }
