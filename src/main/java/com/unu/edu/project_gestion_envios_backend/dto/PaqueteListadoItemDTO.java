@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 public record PaqueteListadoItemDTO(
         Integer id,
-        String numeroRastreo,
+        String nroRastreo,
         Integer remitenteId,
         Integer destinatarioId,
         String destinatarioNombre,
@@ -20,12 +20,15 @@ public record PaqueteListadoItemDTO(
         Boolean esFragil,
         EstadoPaquete estadoActual,
         String observaciones,
-        LocalDateTime createdAt) {
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt,
+        Integer createdBy,
+        Integer updatedBy) {
 
     public static PaqueteListadoItemDTO fromEntity(Paquete paquete) {
         return new PaqueteListadoItemDTO(
                 paquete.getId(),
-                paquete.getNumeroRastreo(),
+                paquete.getNroRastreo(),
                 paquete.getRemitenteId(),
                 paquete.getDestinatarioId(),
                 paquete.getDestinatarioNombre(),
@@ -37,6 +40,9 @@ public record PaqueteListadoItemDTO(
                 paquete.getEsFragil(),
                 paquete.getEstadoActual(),
                 paquete.getObservaciones(),
-                paquete.getCreatedAt());
+                paquete.getCreatedAt(),
+                paquete.getUpdatedAt(),
+                paquete.getCreatedBy(),
+                paquete.getUpdatedBy());
     }
 }

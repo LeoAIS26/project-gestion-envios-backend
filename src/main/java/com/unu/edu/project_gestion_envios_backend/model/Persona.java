@@ -5,6 +5,7 @@ import jakarta.validation.constraints.Size;
 import lombok.*;
 
 @Data
+@NoArgsConstructor
 @MappedSuperclass
 public abstract class Persona extends BaseModel{
 

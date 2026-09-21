@@ -12,5 +12,6 @@ public final class ApiRoutes {
 
         public static final String BASE = "/api/paquetes";
         public static final String LISTADO = BASE + "/listado";
+        public static final String ADD = BASE;
     }
 }

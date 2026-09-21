@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 public class Paquete extends BaseModel{
 
     @Column(name = "numero_rastreo", nullable = false, length = 10, unique = true)
-    private String numeroRastreo;
+    private String nroRastreo;
 
     @Column(name = "remitente_id", nullable = false)
     private Integer remitenteId;

@@ -7,6 +7,7 @@ import lombok.*;
 @Getter 
 @Setter 
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode (callSuper = true)
 @Entity
 @Table(name = "clientes")
