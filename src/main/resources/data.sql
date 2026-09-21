@@ -48,22 +48,22 @@ FROM (VALUES
           ('CLIENTE_3', 'Carlos', 'Alberto', 'Ramírez', 'Vargas', '47891203', '961000103', NULL, NULL, 'CLIENTE', true, NULL),
 
           -- Empleados Pucallpa (3 empleados: 1 admin + 2 empleados)
-          ('EMP_PUC_1', 'Luis', 'Alberto', 'Mendoza', 'Sánchez', '71000101', '961111001', 'lmendoza', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'ADMINISTRADOR', true, 'Agencia Pucallpa Central'),
-          ('EMP_PUC_2', 'Ana', 'Lucía', 'Fernández', 'Ruiz', '71000102', '961111002', 'afernandez', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'EMPLEADO', true, 'Agencia Pucallpa Central'),
-          ('EMP_PUC_3', 'Jorge', 'Antonio', 'Rojas', 'Castro', '71000103', '961111003', 'jrojas', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'EMPLEADO', true, 'Agencia Pucallpa Central'),
+          ('EMP_PUC_1', 'Luis', 'Alberto', 'Mendoza', 'Sánchez', '71000101', '961111001', 'lmendoza', '$2y$10$AU.i7/9ZvKHmZyhtdkrokeh0qTGZTerrR4WXL.nfNsf8kmTOhTL4y', 'ADMINISTRADOR', true, 'Agencia Pucallpa Central'),
+          ('EMP_PUC_2', 'Ana', 'Lucía', 'Fernández', 'Ruiz', '71000102', '961111002', 'afernandez', '$2y$10$iD2TYVKIs1BGcTUdOzO5ZOJ/2uAIB9tk9T9lPovKe./TswVnutRbm', 'EMPLEADO', true, 'Agencia Pucallpa Central'),
+          ('EMP_PUC_3', 'Jorge', 'Antonio', 'Rojas', 'Castro', '71000103', '961111003', 'jrojas', '$2y$10$QJjND993J0VGK7YC5Tx9ku7W6uuF2QVU5BqQ7cwTUxk3qhWLjfF1K', 'EMPLEADO', true, 'Agencia Pucallpa Central'),
 
           -- Empleados Lima (3 empleados: 1 admin + 2 empleados)
-          ('EMP_LIM_1', 'Pedro', 'Jesús', 'Vásquez', 'Mejía', '72000101', '961222001', 'pvasquez', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'EMPLEADO', true, 'Agencia Lima Centro'),
-          ('EMP_LIM_2', 'Sofía', 'Beatriz', 'Morales', 'Paz', '72000102', '961222002', 'smorales', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'EMPLEADO', true, 'Agencia Lima Centro'),
-          ('EMP_LIM_3', 'Ricardo', 'Andrés', 'Chávez', 'Alva', '72000103', '961222003', 'rchavez', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'ADMINISTRADOR', true, 'Agencia Lima Centro'),
+          ('EMP_LIM_1', 'Pedro', 'Jesús', 'Vásquez', 'Mejía', '72000101', '961222001', 'pvasquez', '$2y$10$jBrcf5fdmdVLrOzaE7PyK.rqT8q8yoHMnO1gS32CuLIM7ZRHXIgMy', 'EMPLEADO', true, 'Agencia Lima Centro'),
+          ('EMP_LIM_2', 'Sofía', 'Beatriz', 'Morales', 'Paz', '72000102', '961222002', 'smorales', '$2y$10$avpieifwwQt7.LbZGknoqevdx2YIVjCb.SUVqWaDTLmV9AVWd/RQy', 'EMPLEADO', true, 'Agencia Lima Centro'),
+          ('EMP_LIM_3', 'Ricardo', 'Andrés', 'Chávez', 'Alva', '72000103', '961222003', 'rchavez', '$2y$10$JC8neCydu6hI.ffog7sYv.uTYGT3/0R7fx78APfGySBiBkJxsg1OK', 'ADMINISTRADOR', true, 'Agencia Lima Centro'),
 
           -- Empleados Tingo María (2 empleados)
-          ('EMP_TM_1', 'Rosa', 'Isabel', 'Cruz', 'Salas', '73000101', '961333001', 'rcruz', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'EMPLEADO', true, 'Agencia Tingo María'),
-          ('EMP_TM_2', 'Diego', 'Paul', 'Salazar', 'Bello', '73000102', '961333002', 'dsalazar', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'EMPLEADO', true, 'Agencia Tingo María'),
+          ('EMP_TM_1', 'Rosa', 'Isabel', 'Cruz', 'Salas', '73000101', '961333001', 'rcruz', '$2y$10$ss4HghrWH5Qty6lX2Ar71ON/4TXiKbKzRPO19HlP5z5TPAfmfJ1.a', 'EMPLEADO', true, 'Agencia Tingo María'),
+          ('EMP_TM_2', 'Diego', 'Paul', 'Salazar', 'Bello', '73000102', '961333002', 'dsalazar', '$2y$10$Ac8s6BZh9KZLhiU3oXQdc.oFdyo.3gXjB64roSFICbcYBBbWP0dZO', 'EMPLEADO', true, 'Agencia Tingo María'),
 
           -- Empleados Huánuco (2 empleados)
-          ('EMP_HCO_1', 'Miriam', 'Janet', 'Torres', 'Vega', '74000101', '961444001', 'mtorres', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'EMPLEADO', true, 'Agencia Huánuco Principal'),
-          ('EMP_HCO_2', 'Víctor', 'Hugo', 'Paredes', 'Díaz', '74000102', '961444002', 'vparedes', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhWy', 'EMPLEADO', true, 'Agencia Huánuco Principal')
+          ('EMP_HCO_1', 'Miriam', 'Janet', 'Torres', 'Vega', '74000101', '961444001', 'mtorres', '$2y$10$A250limc3xfhaLIbkob6EeSI1ALUnsiI95R1zkVH3VWMrnQKDBUcy', 'EMPLEADO', true, 'Agencia Huánuco Principal'),
+          ('EMP_HCO_2', 'Víctor', 'Hugo', 'Paredes', 'Díaz', '74000102', '961444002', 'vparedes', '$2y$10$OE/1jR2muJd/UzzRZBQ6SuoAUWMaSCP/q/kPvo9KDTQS02scIf1we', 'EMPLEADO', true, 'Agencia Huánuco Principal')
      ) AS v(ref, nombre, segundo_nombre, apellido_paterno, apellido_materno, dni, telefono, username, password, rol, activo, agencia_nombre)
          LEFT JOIN public.agencias a ON a.nombre = v.agencia_nombre
 WHERE NOT EXISTS (
