@@ -22,4 +22,11 @@ public class Agencia extends BaseModel{
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "ciudad_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Ciudad ciudad;
+
+    @Column(nullable = false, length = 30)
+    private String nombre;
+
+    @Column(nullable = false, length = 255)
+    private String direccion;
+
 }

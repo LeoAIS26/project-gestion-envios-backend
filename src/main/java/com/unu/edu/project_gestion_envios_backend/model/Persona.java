@@ -2,22 +2,14 @@ package com.unu.edu.project_gestion_envios_backend.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-@Getter 
-@Setter 
-@AllArgsConstructor 
-@NoArgsConstructor 
-@EqualsAndHashCode (callSuper = true)
-@Entity
-@Table(name = "usuarios")
-public class Usuario extends BaseModel{
+@Data
+@NoArgsConstructor
+@MappedSuperclass
+public abstract class Persona extends BaseModel{
 
-    @Column(name = "nombre", nullable = false, length = 20)
+    @Column(nullable = false, length = 20)
     private String nombre;
 
     @Column(name = "segundo_nombre", length = 20)
@@ -35,16 +27,7 @@ public class Usuario extends BaseModel{
     @Column( nullable = false, length = 9)
     private String telefono;
 
-    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Rol rol;
-
-    @Size(max = 10)
-    @Column(name = "username", length = 10)
-    private String username;
-
-    @Size(max = 255)
-    @Column(name = "password")
-    private String password;
+    private Boolean activo = Boolean.TRUE;
 
 }
