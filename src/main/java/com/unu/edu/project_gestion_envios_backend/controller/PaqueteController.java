@@ -1,6 +1,6 @@
 package com.unu.edu.project_gestion_envios_backend.controller;
 
-import com.unu.edu.project_gestion_envios_backend.controller.request.PaqueteRequest;
+import com.unu.edu.project_gestion_envios_backend.dto.request.PaqueteRequest;
 import com.unu.edu.project_gestion_envios_backend.dto.PaqueteListadoItemDTO;
 import com.unu.edu.project_gestion_envios_backend.dto.generic.DataResponse;
 import com.unu.edu.project_gestion_envios_backend.dto.generic.StatusResponse;

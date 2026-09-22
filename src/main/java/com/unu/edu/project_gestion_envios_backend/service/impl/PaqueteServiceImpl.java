@@ -1,6 +1,6 @@
 package com.unu.edu.project_gestion_envios_backend.service.impl;
 
-import com.unu.edu.project_gestion_envios_backend.controller.request.PaqueteRequest;
+import com.unu.edu.project_gestion_envios_backend.dto.request.PaqueteRequest;
 import com.unu.edu.project_gestion_envios_backend.model.Paquete;
 import com.unu.edu.project_gestion_envios_backend.repository.PaqueteRepository;
 import com.unu.edu.project_gestion_envios_backend.service.PaqueteService;

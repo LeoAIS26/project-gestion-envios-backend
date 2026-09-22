@@ -1,4 +1,4 @@
-package com.unu.edu.project_gestion_envios_backend.controller.request;
+package com.unu.edu.project_gestion_envios_backend.dto.request;
 
 import com.unu.edu.project_gestion_envios_backend.model.EstadoPaquete;
 import com.unu.edu.project_gestion_envios_backend.utils.messages.PaqueteMensajes;

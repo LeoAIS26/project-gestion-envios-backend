@@ -14,4 +14,21 @@ public final class ApiRoutes {
         public static final String LISTADO = BASE + "/listado";
         public static final String ADD = BASE;
     }
+
+    public static final class ClienteRoutes {
+
+        private ClienteRoutes() {
+        }
+
+        public static final String BASE = "/api/clientes";
+        public static final String BY_DNI = "/dni";
+    }
+
+    public static final class AgenciasRoutes {
+
+        private AgenciasRoutes() {
+        }
+
+        public static final String BASE = "/api/agencias";
+    }
 }
